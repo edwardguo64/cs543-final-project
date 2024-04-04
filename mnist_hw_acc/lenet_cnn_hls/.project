@@ -42,6 +42,21 @@
 			<location>C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/lenet_cnn.cpp</name>
+			<type>1</type>
+			<location>C:/cs543/mnist_hw_acc/lenet_cnn_hls/lenet_cnn.cpp</location>
+		</link>
+		<link>
+			<name>source/lenet_cnn.h</name>
+			<type>1</type>
+			<location>C:/cs543/mnist_hw_acc/lenet_cnn_hls/lenet_cnn.h</location>
+		</link>
+		<link>
+			<name>testbench/lenet_cnn_tb.cpp</name>
+			<type>1</type>
+			<location>C:/cs543/mnist_hw_acc/lenet_cnn_hls/lenet_cnn_tb.cpp</location>
+		</link>
+		<link>
 			<name>solution1/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/solution1.directive</location>
