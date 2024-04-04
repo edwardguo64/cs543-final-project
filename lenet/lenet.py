@@ -18,9 +18,7 @@ train_dataset = torchvision.datasets.MNIST(root = './data',
                                            train = True,
                                            transform = transforms.Compose([
                                                   transforms.Resize((32,32)),
-                                                  transforms.ToTensor(),
-                                                #   transforms.Normalize(mean = (0.1307,), std = (0.3081,))
-                                                  ]),
+                                                  transforms.ToTensor()]),
                                            download = True)
 
 
@@ -28,9 +26,7 @@ test_dataset = torchvision.datasets.MNIST(root = './data',
                                           train = False,
                                           transform = transforms.Compose([
                                                   transforms.Resize((32,32)),
-                                                  transforms.ToTensor(),
-                                                #   transforms.Normalize(mean = (0.1325,), std = (0.3105,))
-                                                  ]),
+                                                  transforms.ToTensor()]),
                                           download=True)
 
 
@@ -49,19 +45,16 @@ class LeNet5(nn.Module):
         super(LeNet5, self).__init__()
         self.layer1 = nn.Sequential(
             nn.Conv2d(1, 6, kernel_size=5, stride=1, padding=0),
-            # nn.BatchNorm2d(6),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size = 2, stride = 2),
             nn.ReLU())
         self.layer2 = nn.Sequential(
             nn.Conv2d(6, 16, kernel_size=5, stride=1, padding=0),
-            # nn.BatchNorm2d(16),
             nn.ReLU(),
             nn.MaxPool2d(kernel_size = 2, stride = 2),
             nn.ReLU())
         self.layer3 = nn.Sequential(
             nn.Conv2d(16, 120, kernel_size=5, stride=1, padding=0),
-            # nn.BatchNorm2d(120),
             nn.ReLU())
         self.fc = nn.Linear(120, num_classes)
         
