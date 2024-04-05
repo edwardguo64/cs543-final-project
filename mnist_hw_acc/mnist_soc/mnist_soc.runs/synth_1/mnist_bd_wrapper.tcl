@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -37,6 +36,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib C:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/hdl/mnist_bd_wrapper.v
 add_files C:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/mnist_bd.bd
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_processing_system7_0_0/mnist_bd_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/bd_0/ip/ip_1/bd_bd60_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/bd_0/ip/ip_1/bd_bd60_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/bd_0/ip/ip_5/bd_bd60_s00a2s_0_ooc.xdc]
@@ -46,7 +46,7 @@ set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/bd_0/ip/ip_9/bd_bd60_swn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/bd_0/ip/ip_10/bd_bd60_sbn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/bd_0/ip/ip_11/bd_bd60_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/bd_0/ip/ip_1/bd_7da1_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/bd_0/ip/ip_1/bd_7da1_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/bd_0/ip/ip_5/bd_7da1_s00a2s_0_ooc.xdc]
@@ -56,7 +56,7 @@ set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/bd_0/ip/ip_9/bd_7da1_swn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/bd_0/ip/ip_10/bd_7da1_sbn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/bd_0/ip/ip_11/bd_7da1_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_0_1/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/bd_0/ip/ip_1/bd_7d31_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/bd_0/ip/ip_1/bd_7d31_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/bd_0/ip/ip_5/bd_7d31_s00a2s_0_ooc.xdc]
@@ -66,7 +66,6 @@ set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/bd_0/ip/ip_9/bd_7d31_swn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/bd_0/ip/ip_10/bd_7d31_sbn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/bd_0/ip/ip_11/bd_7d31_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_smartconnect_1_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_axi_timer_0_0/mnist_bd_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_axi_timer_0_0/mnist_bd_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_xbar_0/mnist_bd_xbar_0_ooc.xdc]

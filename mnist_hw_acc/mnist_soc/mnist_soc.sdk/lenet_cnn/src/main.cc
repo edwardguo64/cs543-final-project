@@ -610,9 +610,9 @@ int main(int argc, char **argv)
 	cout<<"Parsing parameters\n\r";
 	parse_parameters("params.bin");
 
-	for (size_t i = 0; i < 25; i++) {
-		cout << parameters[i] << endl;
-	}
+//	for (size_t i = 0; i < 25; i++) {
+//		cout << parameters[i] << endl;
+//	}
 
 	//Set the offset address on the accelerator
 	//Note that src_a is a pointer to the data in the array
@@ -651,7 +651,7 @@ int main(int argc, char **argv)
     int num_correct = 0;
 
     xil_printf("\n\rTest Image: ");
-    for (int k = 0; k < 1; k++)
+    for (int k = 0; k < NUM_TESTS; k++)
     {
     	//Get test image from dataset
         get_image(images, k, image);
@@ -731,15 +731,15 @@ int main(int argc, char **argv)
         }
         //Largest output is result
 
-        std::cout << "test " << k << ": " << int(result) << "/" << int(labels[k]) << ": ";
+//        std::cout << "test " << k << ": " << int(result) << "/" << int(labels[k]) << ": ";
         if(result == labels[k])
         {
-//            num_correct++;
-            std::cout << "correct" << std::endl;
+            num_correct++;
+//            std::cout << "correct" << std::endl;
         }
         else
         {
-            std::cout << "WRONG" << std::endl;
+//            std::cout << "WRONG" << std::endl;
         }
 
         //Disable these print statements when doing profiling and benchmark times

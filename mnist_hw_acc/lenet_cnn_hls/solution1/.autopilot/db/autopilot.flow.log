@@ -1,6 +1,8 @@
-INFO-FLOW: Workspace C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1 opened at Wed Apr 03 21:34:23 -0500 2024
+INFO-FLOW: Workspace C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1 opened at Thu Apr 04 12:36:51 -0500 2024
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
@@ -27,6 +29,7 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.196 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
@@ -40,15 +43,27 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.103 sec.
+Command         ap_source done; 0.134 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.154 sec.
-Command     ap_source done; 0.16 sec.
-Execute     set_part xc7z020clg400-1 
-Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.172 sec.
-Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Command       ap_source done; 0.337 sec.
+Command     ap_source done; 0.345 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.827 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
 Execute         license_isbetapart xc7z020 
@@ -77,13 +92,13 @@ Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 1.345 sec.
-Execute     ap_part_info -data single -name xc7z020clg400-1 
-Execute     ap_part_info -name xc7z020clg400-1 -data resources 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Command     set_part done; 1.074 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -speed slow 
 Execute     config_sdx -optimization_level=none 
 Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
@@ -106,13 +121,15 @@ Execute       get_config_interface -m_axi_addr64
 Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
 Execute       set_clock_uncertainty default 
-Execute         get_clock_period -default -name=default 
-Execute         config_clock -quiet -name default -uncertainty 1.25 -unit % 
-INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
-Command   open_solution done; 1.64 sec.
-Execute   set_part xc7z020clg400-1 
-Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 1.834 sec.
+Execute   set_part xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute       get_default_platform 
 Execute       license_isbetapart xc7z020 
@@ -140,7 +157,7 @@ Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.145 sec.
+Command   set_part done; 0.15 sec.
 Execute   create_clock -period 10 -name default 
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -166,6 +183,10 @@ Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_unc
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
 Execute     set_clock_uncertainty default 
 WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+Execute   config_export -format ip_catalog -rtl verilog -vivado_optimization_level 2 
+Execute     get_config_export -vivado_impl_strategy 
+Execute     get_config_export -vivado_phys_opt 
+Execute   set_clock_uncertainty 12.5% 
 Execute   csynth_design 
 Execute     get_config_compile -dump_cfg 
 Execute     get_config_compile -effort 
@@ -192,63 +213,60 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "lenet_cnn_hls/lenet_cnn.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E lenet_cnn_hls/lenet_cnn.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp
-Command       clang done; 4.781 sec.
+Command       clang done; 1.546 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.187 sec.
+Command       tidy_31 done; 0.163 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp"  -o "C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/useless.bc
-Command       clang done; 4.8 sec.
-INFO-FLOW: Done: GCC PP time: 11.8 seconds per iteration
+Command       clang done; 1.294 sec.
+INFO-FLOW: Done: GCC PP time: 3 seconds per iteration
 Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp std=gnu++98 -directive=C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.123 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp std=gnu++98 -directive=C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.138 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_cnn.pp.0.cpp.diag.yml C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_cnn.pp.0.cpp.out.log 2> C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.lenet_cnn.pp.0.cpp.err.log 
-Command       ap_eval done; 0.951 sec.
+Command       ap_eval done; 0.135 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp std=gnu++98 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/tidy-3.1.lenet_cnn.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/tidy-3.1.lenet_cnn.pp.0.cpp.out.log 2> C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/tidy-3.1.lenet_cnn.pp.0.cpp.err.log 
-Command         ap_eval done; 2.118 sec.
+Command         ap_eval done; 0.118 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.lenet_cnn.pp.0.cpp.out.log 2> C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.lenet_cnn.pp.0.cpp.err.log 
-Command         ap_eval done; 0.917 sec.
-Command       tidy_31 done; 3.124 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 6.2 seconds per iteration
+Command         ap_eval done; 0.167 sec.
+Command       tidy_31 done; 0.381 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.053 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.bc
-Command       clang done; 4.74 sec.
+Command       clang done; 1.21 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.g.bc -hls-opt -except-internalize lenet_cnn -LC:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 1.329 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 184.910 ; gain = 93.316
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:31 . Memory (MB): peak = 184.910 ; gain = 93.316
+Command       llvm-ld done; 2.262 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 185.223 ; gain = 94.770
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 185.223 ; gain = 94.770
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.pp.bc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.1/win64/lib -lfloatconversion -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 0.933 sec.
+Command         llvm-ld done; 0.556 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top lenet_cnn -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.0.bc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 9.355 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:11 ; elapsed = 00:00:41 . Memory (MB): peak = 184.910 ; gain = 93.316
+Command         transform done; 13.778 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:06 ; elapsed = 00:00:24 . Memory (MB): peak = 185.223 ; gain = 94.770
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.1.bc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
@@ -257,10 +275,10 @@ INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling2' (lenet_cnn_hl
 INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_cnn_hls/lenet_cnn.cpp:69) automatically.
 INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling4' (lenet_cnn_hls/lenet_cnn.cpp:93) automatically.
 INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution5' (lenet_cnn_hls/lenet_cnn.cpp:113) automatically.
-Command         transform done; 17.001 sec.
+Command         transform done; 29.459 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:27 ; elapsed = 00:00:58 . Memory (MB): peak = 184.910 ; gain = 93.316
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:54 . Memory (MB): peak = 185.223 ; gain = 94.770
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.g.1.bc to C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -288,7 +306,7 @@ INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling2' (lenet_cnn_hl
 INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_cnn_hls/lenet_cnn.cpp:69) automatically.
 INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling4' (lenet_cnn_hls/lenet_cnn.cpp:93) automatically.
 INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution5' (lenet_cnn_hls/lenet_cnn.cpp:113) automatically.
-Command         transform done; 18.108 sec.
+Command         transform done; 20.882 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:84:34) to (lenet_cnn_hls/lenet_cnn.cpp:92:7) in function 'max_pooling4'... converting 3 basic blocks.
@@ -296,8 +314,8 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:123:32) to (lenet_cnn_hls/lenet_cnn.cpp:123:26) in function 'fc6'... converting 4 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:104:43) to (lenet_cnn_hls/lenet_cnn.cpp:112:6) in function 'convolution5'... converting 3 basic blocks.
 INFO: [XFORM 203-602] Inlining function 'fc6' into 'lenet_cnn' (lenet_cnn_hls/lenet_cnn.cpp:176) automatically.
-Command         transform done; 0.583 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:46 ; elapsed = 00:01:17 . Memory (MB): peak = 204.023 ; gain = 112.430
+Command         transform done; 0.625 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:31 ; elapsed = 00:01:15 . Memory (MB): peak = 202.535 ; gain = 112.082
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.o.2.bc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:83:30) in function 'max_pooling4'.
@@ -323,11 +341,11 @@ INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative leng
 INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 48000 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:160:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 6 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:155:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
 INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 10 on port 'DATA_FC6_OUTPUT' (lenet_cnn_hls/lenet_cnn.cpp:178:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
-Command         transform done; 16.749 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:02 ; elapsed = 00:01:34 . Memory (MB): peak = 260.828 ; gain = 169.234
+Command         transform done; 17.952 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:39 ; elapsed = 00:01:33 . Memory (MB): peak = 260.844 ; gain = 170.391
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 62.794 sec.
-Command     elaborate done; 91.127 sec.
+Command       opt_and_import_c done; 83.416 sec.
+Command     elaborate done; 90.797 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -397,12 +415,12 @@ INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 WARNING: [SCHED 204-69] Unable to schedule bus request on port 'input_r' (lenet_cnn_hls/lenet_cnn.cpp:18) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 25, Depth = 145.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.819 sec.
-INFO: [HLS 200-111]  Elapsed time: 94.671 seconds; current allocated memory: 203.704 MB.
+Command       schedule done; 1.361 sec.
+INFO: [HLS 200-111]  Elapsed time: 94.953 seconds; current allocated memory: 203.696 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1.verbose.sched.rpt 
-Command       syn_report done; 0.427 sec.
+Command       syn_report done; 0.641 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1.sched.adb -f 
-Command       db_write done; 0.13 sec.
+Command       db_write done; 0.188 sec.
 INFO-FLOW: Finish scheduling convolution1.
 Execute       set_default_model convolution1 
 Execute       bind -model convolution1 
@@ -412,12 +430,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.206 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 206.068 MB.
+Command       bind done; 0.286 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.198 seconds; current allocated memory: 206.061 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1.verbose.bind.rpt 
-Command       syn_report done; 0.409 sec.
+Command       syn_report done; 0.584 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1.bind.adb -f 
-Command       db_write done; 0.157 sec.
+Command       db_write done; 0.233 sec.
 INFO-FLOW: Finish binding convolution1.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'max_pooling2' 
@@ -430,8 +448,8 @@ WARNING: [SCHED 204-68] The II Violation in module 'max_pooling2' (Loop: Loop 1)
    between 'store' operation ('max_value_4_write_ln44', lenet_cnn_hls/lenet_cnn.cpp:44) of variable 'max_value', lenet_cnn_hls/lenet_cnn.cpp:41 on local variable 'input' and 'load' operation ('max_value_4_load', lenet_cnn_hls/lenet_cnn.cpp:38) on local variable 'input'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.128 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.772 seconds; current allocated memory: 206.600 MB.
+Command       schedule done; 0.275 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.215 seconds; current allocated memory: 206.593 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.verbose.sched.rpt 
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.sched.adb -f 
 INFO-FLOW: Finish scheduling max_pooling2.
@@ -443,9 +461,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.225 seconds; current allocated memory: 207.173 MB.
+Command       bind done; 0.211 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.444 seconds; current allocated memory: 207.166 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.verbose.bind.rpt 
-Command       syn_report done; 0.135 sec.
+Command       syn_report done; 0.187 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.bind.adb -f 
 INFO-FLOW: Finish binding max_pooling2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -458,12 +477,12 @@ INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
 WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weights_load_81', lenet_cnn_hls/lenet_cnn.cpp:65) on array 'weights' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 75, Depth = 764.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 5.205 sec.
-INFO: [HLS 200-111]  Elapsed time: 5.47 seconds; current allocated memory: 212.643 MB.
+Command       schedule done; 8.302 sec.
+INFO: [HLS 200-111]  Elapsed time: 8.681 seconds; current allocated memory: 212.651 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.verbose.sched.rpt 
-Command       syn_report done; 1.693 sec.
+Command       syn_report done; 2.51 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.sched.adb -f 
-Command       db_write done; 0.586 sec.
+Command       db_write done; 0.762 sec.
 INFO-FLOW: Finish scheduling convolution3.
 Execute       set_default_model convolution3 
 Execute       bind -model convolution3 
@@ -473,12 +492,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 1.109 sec.
-INFO: [HLS 200-111]  Elapsed time: 3.456 seconds; current allocated memory: 222.960 MB.
+Command       bind done; 1.809 sec.
+INFO: [HLS 200-111]  Elapsed time: 5.183 seconds; current allocated memory: 222.968 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.verbose.bind.rpt 
-Command       syn_report done; 1.837 sec.
+Command       syn_report done; 2.722 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.bind.adb -f 
-Command       db_write done; 0.619 sec.
+Command       db_write done; 1.07 sec.
 INFO-FLOW: Finish binding convolution3.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'max_pooling4' 
@@ -491,8 +510,8 @@ WARNING: [SCHED 204-68] The II Violation in module 'max_pooling4' (Loop: Loop 1)
    between 'store' operation ('max_value_4_write_ln92', lenet_cnn_hls/lenet_cnn.cpp:92) of variable 'max_value', lenet_cnn_hls/lenet_cnn.cpp:89 on local variable 'input' and 'load' operation ('max_value_4_load', lenet_cnn_hls/lenet_cnn.cpp:86) on local variable 'input'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.132 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.68 seconds; current allocated memory: 223.722 MB.
+Command       schedule done; 0.225 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.265 seconds; current allocated memory: 223.746 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.verbose.sched.rpt 
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.sched.adb -f 
 INFO-FLOW: Finish scheduling max_pooling4.
@@ -504,9 +523,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.243 seconds; current allocated memory: 224.280 MB.
+Command       bind done; 0.101 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.369 seconds; current allocated memory: 224.304 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.verbose.bind.rpt 
-Command       syn_report done; 0.135 sec.
+Command       syn_report done; 0.2 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.bind.adb -f 
 INFO-FLOW: Finish binding max_pooling4.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -542,13 +562,13 @@ WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1)
    between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
 INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 1.534 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.809 seconds; current allocated memory: 227.320 MB.
+Command       schedule done; 2.571 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.992 seconds; current allocated memory: 227.344 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5.verbose.sched.rpt 
 INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
-Command       syn_report done; 0.846 sec.
+Command       syn_report done; 2.216 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5.sched.adb -f 
-Command       db_write done; 0.32 sec.
+Command       db_write done; 0.57 sec.
 INFO-FLOW: Finish scheduling convolution5.
 Execute       set_default_model convolution5 
 Execute       bind -model convolution5 
@@ -558,12 +578,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.382 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.627 seconds; current allocated memory: 231.746 MB.
+Command       bind done; 0.379 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.232 seconds; current allocated memory: 231.786 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5.verbose.bind.rpt 
-Command       syn_report done; 1.001 sec.
+Command       syn_report done; 0.755 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5.bind.adb -f 
-Command       db_write done; 0.361 sec.
+Command       db_write done; 0.323 sec.
 INFO-FLOW: Finish binding convolution5.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'lenet_cnn' 
@@ -592,10 +612,10 @@ INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13
 INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_output.fc6_output_buf.gep'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.39 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.852 seconds; current allocated memory: 232.828 MB.
+Command       schedule done; 0.493 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.669 seconds; current allocated memory: 232.852 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.verbose.sched.rpt 
-Command       syn_report done; 0.243 sec.
+Command       syn_report done; 0.213 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.sched.adb -f 
 INFO-FLOW: Finish scheduling lenet_cnn.
 Execute       set_default_model lenet_cnn 
@@ -606,10 +626,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 1.858 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.27 seconds; current allocated memory: 235.378 MB.
+Command       bind done; 1.386 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.726 seconds; current allocated memory: 235.371 MB.
 Execute       syn_report -verbosereport -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.verbose.bind.rpt 
-Command       syn_report done; 1.183 sec.
+Command       syn_report done; 0.889 sec.
 Execute       db_write -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.bind.adb -f 
 INFO-FLOW: Finish binding lenet_cnn.
 Execute       get_model_list lenet_cnn -filter all-wo-channel 
@@ -634,19 +654,18 @@ INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution1'.
-Command       create_rtl_model done; 0.24 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.64 seconds; current allocated memory: 239.590 MB.
+Command       create_rtl_model done; 0.288 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.371 seconds; current allocated memory: 239.567 MB.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl convolution1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/systemc/convolution1 -synmodules convolution1 max_pooling2 convolution3 max_pooling4 convolution5 lenet_cnn 
 Execute       gen_rtl convolution1 -style xilinx -f -lang vhdl -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/vhdl/convolution1 
 Execute       gen_rtl convolution1 -style xilinx -f -lang vlog -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/verilog/convolution1 
 Execute       syn_report -csynth -model convolution1 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/convolution1_csynth.rpt 
-Command       syn_report done; 0.143 sec.
 Execute       syn_report -rtlxml -model convolution1 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/convolution1_csynth.xml 
 Execute       syn_report -verbosereport -model convolution1 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1.verbose.rpt 
-Command       syn_report done; 0.504 sec.
+Command       syn_report done; 0.395 sec.
 Execute       db_write -model convolution1 -f -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1.adb 
-Command       db_write done; 0.28 sec.
+Command       db_write done; 0.252 sec.
 Execute       gen_tb_info convolution1 -p C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution1 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling2' 
@@ -656,7 +675,7 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       create_rtl_model max_pooling2 -vendor xilinx -mg_file C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling2'.
-INFO: [HLS 200-111]  Elapsed time: 1.713 seconds; current allocated memory: 241.395 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.254 seconds; current allocated memory: 241.372 MB.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl max_pooling2 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/systemc/max_pooling2 -synmodules convolution1 max_pooling2 convolution3 max_pooling4 convolution5 lenet_cnn 
 Execute       gen_rtl max_pooling2 -style xilinx -f -lang vhdl -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/vhdl/max_pooling2 
@@ -664,9 +683,9 @@ Execute       gen_rtl max_pooling2 -style xilinx -f -lang vlog -o C:/cs543/mnist
 Execute       syn_report -csynth -model max_pooling2 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/max_pooling2_csynth.rpt 
 Execute       syn_report -rtlxml -model max_pooling2 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/max_pooling2_csynth.xml 
 Execute       syn_report -verbosereport -model max_pooling2 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.verbose.rpt 
-Command       syn_report done; 0.192 sec.
+Command       syn_report done; 0.151 sec.
 Execute       db_write -model max_pooling2 -f -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.adb 
-Command       db_write done; 0.145 sec.
+Command       db_write done; 0.135 sec.
 Execute       gen_tb_info max_pooling2 -p C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convolution3' 
@@ -680,20 +699,20 @@ INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_mul_muleOg': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution3'.
-Command       create_rtl_model done; 1.152 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.979 seconds; current allocated memory: 252.876 MB.
+Command       create_rtl_model done; 0.959 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.549 seconds; current allocated memory: 252.853 MB.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl convolution3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/systemc/convolution3 -synmodules convolution1 max_pooling2 convolution3 max_pooling4 convolution5 lenet_cnn 
 Execute       gen_rtl convolution3 -style xilinx -f -lang vhdl -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/vhdl/convolution3 
 Execute       gen_rtl convolution3 -style xilinx -f -lang vlog -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/verilog/convolution3 
 Execute       syn_report -csynth -model convolution3 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/convolution3_csynth.rpt 
-Command       syn_report done; 0.44 sec.
+Command       syn_report done; 0.293 sec.
 Execute       syn_report -rtlxml -model convolution3 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/convolution3_csynth.xml 
-Command       syn_report done; 0.211 sec.
+Command       syn_report done; 0.173 sec.
 Execute       syn_report -verbosereport -model convolution3 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.verbose.rpt 
-Command       syn_report done; 2.236 sec.
+Command       syn_report done; 1.57 sec.
 Execute       db_write -model convolution3 -f -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.adb 
-Command       db_write done; 1.124 sec.
+Command       db_write done; 0.99 sec.
 Execute       gen_tb_info convolution3 -p C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling4' 
@@ -703,7 +722,7 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       create_rtl_model max_pooling4 -vendor xilinx -mg_file C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.compgen.tcl 
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling4'.
-INFO: [HLS 200-111]  Elapsed time: 6.405 seconds; current allocated memory: 255.673 MB.
+INFO: [HLS 200-111]  Elapsed time: 4.536 seconds; current allocated memory: 255.681 MB.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl max_pooling4 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/systemc/max_pooling4 -synmodules convolution1 max_pooling2 convolution3 max_pooling4 convolution5 lenet_cnn 
 Execute       gen_rtl max_pooling4 -style xilinx -f -lang vhdl -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/vhdl/max_pooling4 
@@ -711,9 +730,9 @@ Execute       gen_rtl max_pooling4 -style xilinx -f -lang vlog -o C:/cs543/mnist
 Execute       syn_report -csynth -model max_pooling4 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/max_pooling4_csynth.rpt 
 Execute       syn_report -rtlxml -model max_pooling4 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/max_pooling4_csynth.xml 
 Execute       syn_report -verbosereport -model max_pooling4 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.verbose.rpt 
-Command       syn_report done; 0.173 sec.
+Command       syn_report done; 0.138 sec.
 Execute       db_write -model max_pooling4 -f -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.adb 
-Command       db_write done; 0.242 sec.
+Command       db_write done; 0.204 sec.
 Execute       gen_tb_info max_pooling4 -p C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'convolution5' 
@@ -725,19 +744,19 @@ INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution5'.
-Command       create_rtl_model done; 1.049 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.91 seconds; current allocated memory: 264.507 MB.
+Command       create_rtl_model done; 0.978 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.659 seconds; current allocated memory: 264.515 MB.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl convolution5 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/systemc/convolution5 -synmodules convolution1 max_pooling2 convolution3 max_pooling4 convolution5 lenet_cnn 
 Execute       gen_rtl convolution5 -style xilinx -f -lang vhdl -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/vhdl/convolution5 
 Execute       gen_rtl convolution5 -style xilinx -f -lang vlog -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/verilog/convolution5 
 Execute       syn_report -csynth -model convolution5 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/convolution5_csynth.rpt 
-Command       syn_report done; 0.198 sec.
+Command       syn_report done; 0.167 sec.
 Execute       syn_report -rtlxml -model convolution5 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/convolution5_csynth.xml 
 Execute       syn_report -verbosereport -model convolution5 -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5.verbose.rpt 
-Command       syn_report done; 1.114 sec.
+Command       syn_report done; 0.931 sec.
 Execute       db_write -model convolution5 -f -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5.adb 
-Command       db_write done; 0.742 sec.
+Command       db_write done; 0.648 sec.
 Execute       gen_tb_info convolution5 -p C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution5 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'lenet_cnn' 
@@ -771,23 +790,24 @@ INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_urem_5nsc4': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_cnn'.
-Command       create_rtl_model done; 0.531 sec.
-INFO: [HLS 200-111]  Elapsed time: 4.157 seconds; current allocated memory: 269.195 MB.
+Command       create_rtl_model done; 1.32 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.079 seconds; current allocated memory: 269.204 MB.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.rtl_wrap.cfg.tcl 
 Execute       gen_rtl lenet_cnn -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/systemc/lenet_cnn -synmodules convolution1 max_pooling2 convolution3 max_pooling4 convolution5 lenet_cnn 
 Execute       gen_rtl lenet_cnn -istop -style xilinx -f -lang vhdl -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/vhdl/lenet_cnn 
-Command       gen_rtl done; 0.148 sec.
+Command       gen_rtl done; 0.178 sec.
 Execute       gen_rtl lenet_cnn -istop -style xilinx -f -lang vlog -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/verilog/lenet_cnn 
+Command       gen_rtl done; 0.102 sec.
 Execute       syn_report -csynth -model lenet_cnn -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/lenet_cnn_csynth.rpt 
 Execute       syn_report -rtlxml -model lenet_cnn -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/syn/report/lenet_cnn_csynth.xml 
 Execute       syn_report -verbosereport -model lenet_cnn -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.verbose.rpt 
-Command       syn_report done; 1.284 sec.
+Command       syn_report done; 1.671 sec.
 Execute       db_write -model lenet_cnn -f -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.adb 
-Command       db_write done; 0.404 sec.
+Command       db_write done; 0.591 sec.
 Execute       gen_tb_info lenet_cnn -p C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn 
 Execute       export_constraint_db -f -tool general -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.constraint.tcl 
 Execute       syn_report -designview -model lenet_cnn -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.design.xml 
-Command       syn_report done; 1.001 sec.
+Command       syn_report done; 1.253 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model lenet_cnn -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model lenet_cnn -o C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/lenet_cnn.protoinst 
@@ -917,10 +937,11 @@ Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.159 sec.
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.139 sec.
-Command       ap_source done; 0.139 sec.
+Command         ap_source done; 0.247 sec.
+Command       ap_source done; 0.247 sec.
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -937,7 +958,7 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Command       ap_source done; 0.174 sec.
+Command       ap_source done; 0.396 sec.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.compgen.tcl 
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
@@ -988,6 +1009,7 @@ INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_pool4_oqcK_ram (RAM)' using 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         source ./CTL.slave.tcl 
+Command         ap_source done; 0.144 sec.
 Execute         is_m_axi_addr64 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
@@ -995,7 +1017,7 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Command       ap_source done; 0.661 sec.
+Command       ap_source done; 1.346 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/global.setting.tcl
@@ -1018,10 +1040,11 @@ Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.157 sec.
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.147 sec.
-Command       ap_source done; 0.148 sec.
+Command         ap_source done; 0.248 sec.
+Command       ap_source done; 0.249 sec.
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lenet_cnn xml_exists=0
@@ -1040,6 +1063,7 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.142 sec.
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling2.compgen.tcl 
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/convolution3.compgen.tcl 
 Execute       source C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/max_pooling4.compgen.tcl 
@@ -1126,16 +1150,19 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:37 ; elapsed = 00:02:21 . Memory (MB): peak = 406.406 ; gain = 314.812
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:00 ; elapsed = 00:02:32 . Memory (MB): peak = 406.793 ; gain = 316.340
 INFO: [VHDL 208-304] Generating VHDL RTL for lenet_cnn.
 INFO: [VLOG 209-307] Generating Verilog RTL for lenet_cnn.
-Command     autosyn done; 47.289 sec.
-Command   csynth_design done; 138.437 sec.
-Command ap_source done; 140.275 sec.
+Command     autosyn done; 58.268 sec.
+Command   csynth_design done; 149.075 sec.
+Command ap_source done; 151.161 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1 opened at Wed Apr 03 21:38:55 -0500 2024
+Command cleanup_all done; 0.175 sec.
+INFO-FLOW: Workspace C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1 opened at Thu Apr 04 12:43:24 -0500 2024
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.lib 
@@ -1175,15 +1202,26 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.105 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
 Command       ap_source done; 0.157 sec.
 Command     ap_source done; 0.158 sec.
-Execute     set_part xc7z020clg400-1 
-Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.126 sec.
-Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.836 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
 Execute         license_isbetapart xc7z020 
@@ -1197,28 +1235,16 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data info
 Execute         config_chip_info -quiet -speed slow 
 Execute       add_library xilinx/zynq/zynq_fpv6 
 Execute         get_default_platform 
-Execute         open_platform DefaultPlatform 
-Execute         import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute             source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
-Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
-Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
-Execute                 source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
-Execute               source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
-Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 1.322 sec.
-Execute     ap_part_info -data single -name xc7z020clg400-1 
-Execute     ap_part_info -name xc7z020clg400-1 -data resources 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Command     set_part done; 1.101 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -speed slow 
 Execute     config_sdx -optimization_level=none 
 Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
@@ -1241,13 +1267,12 @@ Execute       get_config_interface -m_axi_addr64
 Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
 Execute       set_clock_uncertainty default 
-Execute         get_clock_period -default -name=default 
-Execute         config_clock -quiet -name default -uncertainty 1.25 -unit % 
-INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
 Execute     config_export -vivado_optimization_level=2 
 Execute       get_config_export -vivado_impl_strategy 
 Execute       get_config_export -vivado_phys_opt 
-Command   open_solution done; 1.607 sec.
+Command   open_solution done; 1.399 sec.
 Execute   export_design -rtl verilog -format ip_catalog 
 Execute     get_config_export -acc 
 Execute     get_config_export -clock_margin 
@@ -1298,11 +1323,10 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.111 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.169 sec.
-Command     ap_source done; 0.169 sec.
+Command       ap_source done; 0.138 sec.
+Command     ap_source done; 0.138 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -1334,11 +1358,11 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.11 sec.
+Command         ap_source done; 0.108 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.169 sec.
-Command     ap_source done; 0.169 sec.
+Command       ap_source done; 0.156 sec.
+Command     ap_source done; 0.156 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lenet_cnn xml_exists=1
@@ -1483,16 +1507,15 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.128 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.181 sec.
-Command     ap_source done; 0.181 sec.
+Command       ap_source done; 0.138 sec.
+Command     ap_source done; 0.138 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:     exec C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/impl/ip/pack.bat
-Command   export_design done; 32.795 sec.
-Command ap_source done; 34.421 sec.
+Command   export_design done; 42.235 sec.
+Command ap_source done; 43.658 sec.
 Execute cleanup_all 

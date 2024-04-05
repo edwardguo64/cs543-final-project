@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Apr  3 22:09:50 2024
+// Date        : Wed Apr  3 22:09:49 2024
 // Host        : Edward-Desktop running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_auto_pc_0/mnist_bd_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top mnist_bd_auto_pc_0 -prefix
+//               mnist_bd_auto_pc_0_ mnist_bd_auto_pc_0_stub.v
 // Design      : mnist_bd_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

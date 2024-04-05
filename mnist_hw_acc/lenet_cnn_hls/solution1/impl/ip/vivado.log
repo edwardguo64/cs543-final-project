@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Apr  3 21:39:02 2024
-# Process ID: 40692
+# Start of session at: Thu Apr  4 12:43:31 2024
+# Process ID: 27560
 # Current directory: C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/impl/ip/vivado.log
@@ -14,15 +14,18 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'lenet_cnn_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 399.480 ; gain = 41.559
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_cnn_ap_fadd_3_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_cnn_ap_fadd_3_full_dsp_32'...
 WARNING: [IP_Flow 19-4832] The IP name 'lenet_cnn_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 409.328 ; gain = 0.062
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_cnn_ap_fcmp_0_no_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_cnn_ap_fcmp_0_no_dsp_32'...
 WARNING: [IP_Flow 19-4832] The IP name 'lenet_cnn_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 414.305 ; gain = 4.977
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_cnn_ap_fmul_2_max_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_cnn_ap_fmul_2_max_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 21:39:29 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  4 12:44:07 2024...
