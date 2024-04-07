@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Apr  4 12:48:17 2024
-//Host        : edward-thinkpad running 64-bit major release  (build 9200)
+//Date        : Thu Apr  4 23:16:40 2024
+//Host        : Edward-Desktop running 64-bit major release  (build 9200)
 //Command     : generate_target mnist_bd_wrapper.bd
 //Design      : mnist_bd_wrapper
 //Purpose     : IP block netlist

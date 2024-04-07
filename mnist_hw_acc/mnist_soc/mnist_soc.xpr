@@ -40,13 +40,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
-    <Option Name="WTIesExportSim" Val="1"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -67,11 +67,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_smartconnect_1_0/mnist_bd_smartconnect_1_0.xci">
-          <Proxy FileSetName="mnist_bd_smartconnect_1_0"/>
+        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_proc_sys_reset_0_0/mnist_bd_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="mnist_bd_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_xbar_0/mnist_bd_xbar_0.xci">
-          <Proxy FileSetName="mnist_bd_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_axi_timer_0_0/mnist_bd_axi_timer_0_0.xci">
+          <Proxy FileSetName="mnist_bd_axi_timer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_smartconnect_0_1/mnist_bd_smartconnect_0_1.xci">
+          <Proxy FileSetName="mnist_bd_smartconnect_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_processing_system7_0_0/mnist_bd_processing_system7_0_0.xci">
           <Proxy FileSetName="mnist_bd_processing_system7_0_0"/>
@@ -79,14 +82,11 @@
         <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_smartconnect_0_0/mnist_bd_smartconnect_0_0.xci">
           <Proxy FileSetName="mnist_bd_smartconnect_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_smartconnect_0_1/mnist_bd_smartconnect_0_1.xci">
-          <Proxy FileSetName="mnist_bd_smartconnect_0_1"/>
+        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_xbar_0/mnist_bd_xbar_0.xci">
+          <Proxy FileSetName="mnist_bd_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_proc_sys_reset_0_0/mnist_bd_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="mnist_bd_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_axi_timer_0_0/mnist_bd_axi_timer_0_0.xci">
-          <Proxy FileSetName="mnist_bd_axi_timer_0_0"/>
+        <CompFileExtendedInfo CompFileName="mnist_bd.bd" FileRelPathName="ip/mnist_bd_smartconnect_1_0/mnist_bd_smartconnect_1_0.xci">
+          <Proxy FileSetName="mnist_bd_smartconnect_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/mnist_bd/hdl/mnist_bd_wrapper.v">

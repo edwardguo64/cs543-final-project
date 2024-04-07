@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="mnist_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1712252910"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1712252910"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1712252910"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1712252910"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1712290612"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1712290612"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1712290612"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1712290612"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\mnist_bd_processing_system7_0_0\mnist_bd_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>

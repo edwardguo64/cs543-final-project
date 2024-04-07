@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="lenet_cnn.h" path="C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.h"/>
     <originFiles name="lenet_cnn.cpp" path="C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.cpp"/>
+    <originFiles name="lenet_cnn.h" path="C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.h"/>
   </source>
   <testbench>
     <originFiles name="lenet_cnn_tb.cpp" path="C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn_tb.cpp"/>

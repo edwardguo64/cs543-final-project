@@ -65,7 +65,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 5
+  set_param chipscope.maxJobs 3
   open_checkpoint mnist_bd_wrapper_routed.dcp
   set_property webtalk.parent_dir C:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

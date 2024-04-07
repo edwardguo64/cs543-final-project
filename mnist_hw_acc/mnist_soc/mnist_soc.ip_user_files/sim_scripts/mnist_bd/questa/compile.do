@@ -265,39 +265,39 @@ vcom -work floating_point_v7_1_8 -64 -93 \
 "../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/83a3/hdl/floating_point_v7_1_vh_rfs.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/ec67/hdl" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/8c62/hdl" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/1ddd/hdl/verilog" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b2d0/hdl/verilog" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/convolution1.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/convolution3.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/convolution5.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv1_bg8j.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv1_oncg.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv1_wfYi.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv3_bibs.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv3_opcA.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv3_whbi.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv5_bkbM.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_conv5_wjbC.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_CTL_s_axi.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_DATA_FC6_OUTPUT_m_axi.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_DATA_IMAGE_m_axi.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_DATA_PARAMETERS_m_axi.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_fadd_32bkb.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_fc6_bias.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_fc6_weilbW.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_fcmp_32dEe.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_fmul_32cud.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_mul_muleOg.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_output_mb6.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_pool2_oocq.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_pool4_oqcK.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn_urem_5nsc4.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/max_pooling2.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/max_pooling4.v" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/verilog/lenet_cnn.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/convolution1.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/convolution3.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/convolution5.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv1_bg8j.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv1_oncg.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv1_wfYi.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv3_bibs.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv3_opcA.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv3_whbi.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv5_bkbM.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_conv5_wjbC.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_CTL_s_axi.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_DATA_FC6_OUTPUT_m_axi.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_DATA_IMAGE_m_axi.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_DATA_PARAMETERS_m_axi.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_fadd_32bkb.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_fc6_bias.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_fc6_weilbW.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_fcmp_32dEe.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_fmul_32cud.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_mul_muleOg.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_output_mb6.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_pool2_oocq.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_pool4_oqcK.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn_urem_5nsc4.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/max_pooling2.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/max_pooling4.v" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/verilog/lenet_cnn.v" \
 
 vcom -work xil_defaultlib -64 -93 \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/ip/lenet_cnn_ap_fadd_3_full_dsp_32.vhd" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/ip/lenet_cnn_ap_fcmp_0_no_dsp_32.vhd" \
-"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b513/hdl/ip/lenet_cnn_ap_fmul_2_max_dsp_32.vhd" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/ip/lenet_cnn_ap_fadd_3_full_dsp_32.vhd" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/ip/lenet_cnn_ap_fcmp_0_no_dsp_32.vhd" \
+"../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/d1cd/hdl/ip/lenet_cnn_ap_fmul_2_max_dsp_32.vhd" \
 "../../../bd/mnist_bd/ip/mnist_bd_lenet_cnn_0_0/sim/mnist_bd_lenet_cnn_0_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_19 -64 "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/ec67/hdl" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/8c62/hdl" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/1ddd/hdl/verilog" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ipshared/b2d0/hdl/verilog" "+incdir+../../../../mnist_soc.srcs/sources_1/bd/mnist_bd/ip/mnist_bd_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \

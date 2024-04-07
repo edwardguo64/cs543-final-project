@@ -15,9 +15,9 @@
   "HlsSolution": {"Config": [
       "config_sdx -optimization_level=none",
       "config_sdx -target=none",
-      "config_export -vivado_optimization_level=2",
       "config_export -format=ip_catalog",
-      "config_export -rtl=verilog"
+      "config_export -rtl=verilog",
+      "config_export -vivado_optimization_level=2"
     ]},
   "Args": {
     "image": {
@@ -1983,7 +1983,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-04-04 12:39:22 -0500",
+    "Time": "2024-04-04 23:14:42 -0500",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }
