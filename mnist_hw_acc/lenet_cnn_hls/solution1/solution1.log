@@ -1557,3 +1557,699 @@ INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: conf
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lenet_cnn_hls/lenet_cnn.cpp' ... 
+ERROR: [HLS 214-124] use of undeclared identifier 'image': C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.cpp:132
+ERROR: [HLS 214-124] use of undeclared identifier 'parameters': C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.cpp:133
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lenet_cnn_hls/lenet_cnn.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 184.340 ; gain = 94.305
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:26 . Memory (MB): peak = 184.340 ; gain = 94.305
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 184.340 ; gain = 94.305
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution1' (lenet_cnn_hls/lenet_cnn.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling2' (lenet_cnn_hls/lenet_cnn.cpp:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_cnn_hls/lenet_cnn.cpp:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling4' (lenet_cnn_hls/lenet_cnn.cpp:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution5' (lenet_cnn_hls/lenet_cnn.cpp:113) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:21 ; elapsed = 00:00:47 . Memory (MB): peak = 184.340 ; gain = 94.305
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:104) in function 'convolution5' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:57) in function 'convolution3' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:11) in function 'convolution1' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:106) in function 'convolution5' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:107) in function 'convolution5' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:59) in function 'convolution3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:60) in function 'convolution3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:61) in function 'convolution3' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:13) in function 'convolution1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:14) in function 'convolution1' completely with a factor of 5.
+INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'image' (lenet_cnn_hls/lenet_cnn.cpp:137) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv1_weights' (lenet_cnn_hls/lenet_cnn.cpp:138) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'fc6_weights' (lenet_cnn_hls/lenet_cnn.cpp:144) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv5_output' (lenet_cnn_hls/lenet_cnn.cpp:153) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'fc6_weights.0' (lenet_cnn_hls/lenet_cnn.cpp:144) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv5_output.0' (lenet_cnn_hls/lenet_cnn.cpp:153) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution1' (lenet_cnn_hls/lenet_cnn.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling2' (lenet_cnn_hls/lenet_cnn.cpp:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_cnn_hls/lenet_cnn.cpp:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling4' (lenet_cnn_hls/lenet_cnn.cpp:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution5' (lenet_cnn_hls/lenet_cnn.cpp:113) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:84:34) to (lenet_cnn_hls/lenet_cnn.cpp:92:7) in function 'max_pooling4'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:36:48) to (lenet_cnn_hls/lenet_cnn.cpp:44:22) in function 'max_pooling2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:123:32) to (lenet_cnn_hls/lenet_cnn.cpp:123:26) in function 'fc6'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:104:43) to (lenet_cnn_hls/lenet_cnn.cpp:112:6) in function 'convolution5'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'fc6' into 'lenet_cnn' (lenet_cnn_hls/lenet_cnn.cpp:179) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 203.668 ; gain = 113.633
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:83:30) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:82:26) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:81:22) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:80:18) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:35:30) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:34:26) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:33:22) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:32:18) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-10' (lenet_cnn_hls/lenet_cnn.cpp:122:15) in function 'lenet_cnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:103:16) in function 'convolution5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:56:16) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:55:16) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:10:23) in function 'convolution1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:9:20) in function 'convolution1'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 10 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:167:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 1024 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:155:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 120 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:164:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 1200 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:166:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 150 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:157:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 16 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:161:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2400 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:160:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 48000 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:163:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 6 on port 'DATA_INPUT' (lenet_cnn_hls/lenet_cnn.cpp:158:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 10 on port 'DATA_FC6_OUTPUT' (lenet_cnn_hls/lenet_cnn.cpp:181:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:49 ; elapsed = 00:01:16 . Memory (MB): peak = 261.047 ; gain = 171.012
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_cnn' ...
+WARNING: [SYN 201-107] Renaming port name 'lenet_cnn/input' to 'lenet_cnn/input_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weights_0_load_2', lenet_cnn_hls/lenet_cnn.cpp:18) on array 'weights_0' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 13, Depth = 135.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 76.383 seconds; current allocated memory: 203.279 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.471 seconds; current allocated memory: 204.853 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'max_pooling2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('max_value_4_write_ln44', lenet_cnn_hls/lenet_cnn.cpp:44) of variable 'max_value', lenet_cnn_hls/lenet_cnn.cpp:41 on local variable 'input' and 'load' operation ('max_value_4_load', lenet_cnn_hls/lenet_cnn.cpp:38) on local variable 'input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.653 seconds; current allocated memory: 205.364 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.232 seconds; current allocated memory: 205.937 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weights_load_81', lenet_cnn_hls/lenet_cnn.cpp:65) on array 'weights' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 75, Depth = 764.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.692 seconds; current allocated memory: 211.425 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.866 seconds; current allocated memory: 221.726 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'max_pooling4' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('max_value_4_write_ln92', lenet_cnn_hls/lenet_cnn.cpp:92) of variable 'max_value', lenet_cnn_hls/lenet_cnn.cpp:89 on local variable 'input' and 'load' operation ('max_value_4_load', lenet_cnn_hls/lenet_cnn.cpp:86) on local variable 'input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.276 seconds; current allocated memory: 222.503 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 223.026 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 130, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 193, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 225, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.538 seconds; current allocated memory: 226.102 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.422 seconds; current allocated memory: 230.528 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.image.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv1_weights.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv1_bias.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv3_weights.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv3_bias.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv5_weights.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv5_bias.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_weights.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_bias.input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 10'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_output.fc6_output_buf.gep'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.691 seconds; current allocated memory: 231.646 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.275 seconds; current allocated memory: 234.241 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fadd_32ns_32ns_32_5_full_dsp_1' to 'lenet_cnn_fadd_32bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fmul_32ns_32ns_32_4_max_dsp_1' to 'lenet_cnn_fmul_32cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fcmp_32ns_32ns_1_2_1' to 'lenet_cnn_fcmp_32dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution1'.
+INFO: [HLS 200-111]  Elapsed time: 1.324 seconds; current allocated memory: 237.533 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling2'.
+INFO: [HLS 200-111]  Elapsed time: 1.16 seconds; current allocated memory: 239.097 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_mul_mul_6ns_13s_13_1_1' to 'lenet_cnn_mul_muleOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_mul_muleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution3'.
+INFO: [HLS 200-111]  Elapsed time: 1.479 seconds; current allocated memory: 250.575 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling4'.
+INFO: [HLS 200-111]  Elapsed time: 7.446 seconds; current allocated memory: 253.388 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution5'.
+INFO: [HLS 200-111]  Elapsed time: 1.564 seconds; current allocated memory: 262.192 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/DATA_INPUT' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/DATA_FC6_OUTPUT' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/input_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/fc6_output' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_cnn' to 's_axilite & ap_ctrl_hs' (register).
+INFO: [RTGEN 206-100] Bundling port 'return', 'input_r' and 'fc6_output' to AXI-Lite port CTL.
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv1_weights_0' to 'lenet_cnn_conv1_wfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv1_bias' to 'lenet_cnn_conv1_bg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv3_weights' to 'lenet_cnn_conv3_whbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv3_bias' to 'lenet_cnn_conv3_bibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv5_weights' to 'lenet_cnn_conv5_wjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv5_bias' to 'lenet_cnn_conv5_bkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fc6_weights_0_0' to 'lenet_cnn_fc6_weilbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_output_assign' to 'lenet_cnn_output_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv1_output' to 'lenet_cnn_conv1_oncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_pool2_output' to 'lenet_cnn_pool2_oocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv3_output' to 'lenet_cnn_conv3_opcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_pool4_output' to 'lenet_cnn_pool4_oqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv5_output_0_0' to 'lenet_cnn_conv5_orcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_urem_5ns_4ns_5_9_1' to 'lenet_cnn_urem_5nsc4' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_urem_5nsc4': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_cnn'.
+INFO: [HLS 200-111]  Elapsed time: 3.53 seconds; current allocated memory: 266.688 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'lenet_cnn_urem_5nsc4_div'
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_image_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv1_wfYi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv1_bg8j_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv3_whbi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv3_bibs_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv5_wjbC_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv5_bkbM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_fc6_weilbW_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_fc6_bias_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_output_mb6_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv1_oncg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_pool2_oocq_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv3_opcA_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_pool4_oqcK_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:19 ; elapsed = 00:01:57 . Memory (MB): peak = 402.863 ; gain = 312.828
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_cnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_cnn.
+INFO: [HLS 200-112] Total elapsed time: 117.468 seconds; peak allocated memory: 266.688 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lenet_cnn_hls/lenet_cnn.cpp' ... 
+ERROR: [HLS 200-70] Option 'offset' in 's_axilite' mode must have an integer value.
+ERROR: [HLS 200-70] '#pragma HLS INTERFACE s_axilite depth=10 port=&fc6_output offset=slave bundle=DATA_FC6_OUTPUT' is not a valid pragma.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lenet_cnn_hls/lenet_cnn.cpp' ... 
+ERROR: [HLS 214-124] use of undeclared identifier 'image': C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.cpp:132
+ERROR: [HLS 214-124] use of undeclared identifier 'parameters': C:\cs543\mnist_hw_acc\lenet_cnn_hls\lenet_cnn.cpp:133
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lenet_cnn_hls/lenet_cnn.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 185.078 ; gain = 93.598
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 185.078 ; gain = 93.598
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:33 . Memory (MB): peak = 185.078 ; gain = 93.598
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution1' (lenet_cnn_hls/lenet_cnn.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling2' (lenet_cnn_hls/lenet_cnn.cpp:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_cnn_hls/lenet_cnn.cpp:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling4' (lenet_cnn_hls/lenet_cnn.cpp:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution5' (lenet_cnn_hls/lenet_cnn.cpp:113) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:46 . Memory (MB): peak = 185.078 ; gain = 93.598
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:104) in function 'convolution5' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:57) in function 'convolution3' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:11) in function 'convolution1' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:106) in function 'convolution5' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:107) in function 'convolution5' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:59) in function 'convolution3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:60) in function 'convolution3' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:61) in function 'convolution3' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:13) in function 'convolution1' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:14) in function 'convolution1' completely with a factor of 5.
+INFO: [XFORM 203-102] Partitioning array 'output.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'input.0' in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'weights.0' in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv1_weights' (lenet_cnn_hls/lenet_cnn.cpp:137) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'fc6_weights' (lenet_cnn_hls/lenet_cnn.cpp:143) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv5_output' (lenet_cnn_hls/lenet_cnn.cpp:152) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'fc6_weights.0' (lenet_cnn_hls/lenet_cnn.cpp:143) in dimension 3 automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv5_output.0' (lenet_cnn_hls/lenet_cnn.cpp:152) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution1' (lenet_cnn_hls/lenet_cnn.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling2' (lenet_cnn_hls/lenet_cnn.cpp:45) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution3' (lenet_cnn_hls/lenet_cnn.cpp:69) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'max_pooling4' (lenet_cnn_hls/lenet_cnn.cpp:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'relu' into 'convolution5' (lenet_cnn_hls/lenet_cnn.cpp:113) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:84:34) to (lenet_cnn_hls/lenet_cnn.cpp:92:7) in function 'max_pooling4'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:36:48) to (lenet_cnn_hls/lenet_cnn.cpp:44:22) in function 'max_pooling2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:123:32) to (lenet_cnn_hls/lenet_cnn.cpp:123:26) in function 'fc6'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (lenet_cnn_hls/lenet_cnn.cpp:104:43) to (lenet_cnn_hls/lenet_cnn.cpp:112:6) in function 'convolution5'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'fc6' into 'lenet_cnn' (lenet_cnn_hls/lenet_cnn.cpp:176) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:01:00 . Memory (MB): peak = 203.980 ; gain = 112.500
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:83:30) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:82:26) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:81:22) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:80:18) in function 'max_pooling4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:35:30) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1.1' (lenet_cnn_hls/lenet_cnn.cpp:34:26) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:33:22) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:32:18) in function 'max_pooling2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-9' (lenet_cnn_hls/lenet_cnn.cpp:122:15) in function 'lenet_cnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:103:16) in function 'convolution5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:56:16) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:55:16) in function 'convolution3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (lenet_cnn_hls/lenet_cnn.cpp:10:23) in function 'convolution1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (lenet_cnn_hls/lenet_cnn.cpp:9:20) in function 'convolution1'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 10 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:164:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 120 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:161:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 1200 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:163:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 150 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:154:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 16 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:158:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 2400 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:157:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 48000 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:160:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 6 on port 'DATA_PARAMETERS' (lenet_cnn_hls/lenet_cnn.cpp:155:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 10 on port 'DATA_FC6_OUTPUT' (lenet_cnn_hls/lenet_cnn.cpp:178:2). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:01:13 . Memory (MB): peak = 260.477 ; gain = 168.996
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_cnn' ...
+WARNING: [SYN 201-107] Renaming port name 'lenet_cnn/image' to 'lenet_cnn/image_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule bus request on port 'input_r' (lenet_cnn_hls/lenet_cnn.cpp:18) due to limited memory ports. Please consider using a memory core with more ports or partitioning the array.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 25, Depth = 145.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 73.423 seconds; current allocated memory: 203.766 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.661 seconds; current allocated memory: 206.131 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'max_pooling2' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('max_value_4_write_ln44', lenet_cnn_hls/lenet_cnn.cpp:44) of variable 'max_value', lenet_cnn_hls/lenet_cnn.cpp:41 on local variable 'input' and 'load' operation ('max_value_4_load', lenet_cnn_hls/lenet_cnn.cpp:38) on local variable 'input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.628 seconds; current allocated memory: 206.647 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 207.220 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('weights_load_81', lenet_cnn_hls/lenet_cnn.cpp:65) on array 'weights' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'weights'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 75, Depth = 764.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 4.323 seconds; current allocated memory: 212.721 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.72 seconds; current allocated memory: 223.022 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'max_pooling4' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('max_value_4_write_ln92', lenet_cnn_hls/lenet_cnn.cpp:92) of variable 'max_value', lenet_cnn_hls/lenet_cnn.cpp:89 on local variable 'input' and 'load' operation ('max_value_4_load', lenet_cnn_hls/lenet_cnn.cpp:86) on local variable 'input'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.162 seconds; current allocated memory: 223.816 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.183 seconds; current allocated memory: 224.374 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 130, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 193, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 225, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 253, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 255, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+WARNING: [SCHED 204-68] The II Violation in module 'convolution5' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 256, distance = 1, offset = 1)
+   between 'store' operation ('sum_1_write_ln112', lenet_cnn_hls/lenet_cnn.cpp:112) of variable 'input', lenet_cnn_hls/lenet_cnn.cpp:110 on local variable 'input' and 'load' operation ('sum_1_load', lenet_cnn_hls/lenet_cnn.cpp:108) on local variable 'input'.
+INFO: [SCHED 204-61] Unable to satisfy pipeline directive: Unable to pipeline the region.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.439 seconds; current allocated memory: 227.398 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.292 seconds; current allocated memory: 231.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv1_weights.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv1_bias.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv3_weights.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv3_bias.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv5_weights.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.conv5_bias.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_weights.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_bias.parameters'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 9'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.fc6_output.fc6_output_buf.gep'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.479 seconds; current allocated memory: 232.922 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.81 seconds; current allocated memory: 235.457 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fadd_32ns_32ns_32_5_full_dsp_1' to 'lenet_cnn_fadd_32bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fmul_32ns_32ns_32_4_max_dsp_1' to 'lenet_cnn_fmul_32cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fcmp_32ns_32ns_1_2_1' to 'lenet_cnn_fcmp_32dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution1'.
+INFO: [HLS 200-111]  Elapsed time: 1.344 seconds; current allocated memory: 239.653 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling2'.
+INFO: [HLS 200-111]  Elapsed time: 1.34 seconds; current allocated memory: 241.442 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_mul_mul_6ns_13s_13_1_1' to 'lenet_cnn_mul_muleOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_mul_muleOg': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution3'.
+INFO: [HLS 200-111]  Elapsed time: 1.333 seconds; current allocated memory: 252.923 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling4'.
+INFO: [HLS 200-111]  Elapsed time: 5.057 seconds; current allocated memory: 255.751 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolution5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fcmp_32dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolution5'.
+INFO: [HLS 200-111]  Elapsed time: 1.488 seconds; current allocated memory: 264.570 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/DATA_IMAGE' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/DATA_PARAMETERS' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/DATA_FC6_OUTPUT' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/image_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/parameters' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_cnn/fc6_output' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_cnn' to 's_axilite & ap_ctrl_hs' (register).
+INFO: [RTGEN 206-100] Bundling port 'return', 'image_r', 'parameters' and 'fc6_output' to AXI-Lite port CTL.
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv1_weights_0' to 'lenet_cnn_conv1_wfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv1_bias' to 'lenet_cnn_conv1_bg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv3_weights' to 'lenet_cnn_conv3_whbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv3_bias' to 'lenet_cnn_conv3_bibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv5_weights' to 'lenet_cnn_conv5_wjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv5_bias' to 'lenet_cnn_conv5_bkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_fc6_weights_0_0' to 'lenet_cnn_fc6_weilbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_output_assign' to 'lenet_cnn_output_mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv1_output' to 'lenet_cnn_conv1_oncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_pool2_output' to 'lenet_cnn_pool2_oocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv3_output' to 'lenet_cnn_conv3_opcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_pool4_output' to 'lenet_cnn_pool4_oqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_conv5_output_0_0' to 'lenet_cnn_conv5_orcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'lenet_cnn_urem_5ns_4ns_5_9_1' to 'lenet_cnn_urem_5nsc4' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fadd_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_fmul_32cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'lenet_cnn_urem_5nsc4': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_cnn'.
+INFO: [HLS 200-111]  Elapsed time: 3.345 seconds; current allocated memory: 269.227 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'lenet_cnn_urem_5nsc4_div'
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv1_wfYi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv1_bg8j_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv3_whbi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv3_bibs_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv5_wjbC_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv5_bkbM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_fc6_weilbW_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_fc6_bias_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_output_mb6_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv1_oncg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_pool2_oocq_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_conv3_opcA_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_cnn_pool4_oqcK_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:14 ; elapsed = 00:01:50 . Memory (MB): peak = 405.719 ; gain = 314.238
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_cnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_cnn.
+INFO: [HLS 200-112] Total elapsed time: 110.208 seconds; peak allocated memory: 269.227 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

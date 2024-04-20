@@ -5,8 +5,8 @@
 ############################################################
 open_project lenet_cnn_hls
 set_top lenet_cnn
-add_files lenet_cnn_hls/lenet_cnn.cpp
 add_files lenet_cnn_hls/lenet_cnn.h
+add_files lenet_cnn_hls/lenet_cnn.cpp
 add_files -tb lenet_cnn_hls/lenet_cnn_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020-clg400-1}

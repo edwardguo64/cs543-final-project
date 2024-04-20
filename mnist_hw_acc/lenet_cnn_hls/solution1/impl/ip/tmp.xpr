@@ -6,7 +6,7 @@
 <Project Version="7" Minor="40" Path="C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/impl/ip/tmp.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="1537c36147494662a4cbd7abcf96a216"/>
+    <Option Name="Id" Val="8ff2bc771267409198a05562cabbe6cb"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr  4 23:34:27 2024
-# Process ID: 31572
+# Start of session at: Thu Apr 18 17:24:30 2024
+# Process ID: 48900
 # Current directory: C:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.runs/impl_1
 # Command line: vivado.exe -log mnist_bd_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mnist_bd_wrapper.tcl -notrace
 # Log file: C:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.runs/impl_1/mnist_bd_wrapper.vdi

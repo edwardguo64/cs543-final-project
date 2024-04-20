@@ -6022,8 +6022,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Lenet_cnn</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2113500255</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-05T04:15:36Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2113521464</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2024-04-19T21:45:09Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>

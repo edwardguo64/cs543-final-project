@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'max_pooling2'
 ================================================================
-* Date:           Thu Apr  4 23:14:05 2024
+* Date:           Fri Apr 19 16:13:03 2024
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        lenet_cnn_hls
@@ -291,8 +291,7 @@ The critical path consists of the following:
 	'phi' operation ('indvar_flatten63', lenet_cnn_hls/lenet_cnn.cpp:33) with incoming values : ('select_ln33_5', lenet_cnn_hls/lenet_cnn.cpp:33) [8]  (0 ns)
 	'icmp' operation ('icmp_ln33', lenet_cnn_hls/lenet_cnn.cpp:33) [25]  (1.77 ns)
 	'xor' operation ('xor_ln41', lenet_cnn_hls/lenet_cnn.cpp:41) [41]  (0.978 ns)
-	'and' operation ('and_ln41_5', lenet_cnn_hls/lenet_cnn.cpp:41) [50]  (0 ns)
-	'and' operation ('and_ln33_3', lenet_cnn_hls/lenet_cnn.cpp:33) [74]  (0.978 ns)
+	'and' operation ('and_ln41_6', lenet_cnn_hls/lenet_cnn.cpp:41) [52]  (0.978 ns)
 	'or' operation ('or_ln34', lenet_cnn_hls/lenet_cnn.cpp:34) [76]  (0 ns)
 	'or' operation ('or_ln34_1', lenet_cnn_hls/lenet_cnn.cpp:34) [77]  (0.978 ns)
 	'select' operation ('select_ln34', lenet_cnn_hls/lenet_cnn.cpp:34) [78]  (0.993 ns)

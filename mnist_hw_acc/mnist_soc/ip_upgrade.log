@@ -1,6 +1,810 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Fri Apr 19 16:46:19 2024
+| Host         : Edward-Desktop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mnist_bd_lenet_cnn_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mnist_bd_lenet_cnn_0_0 (xilinx.com:hls:lenet_cnn:1.0) from (Rev. 2113521388) to (Rev. 2113521464)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'mnist_bd_lenet_cnn_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_DATA_INPUT'
+
+-Upgrade has added interface 'm_axi_DATA_IMAGE' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 'm_axi_DATA_PARAMETERS' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mnist_bd_lenet_cnn_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's_axi_CTL_ARADDR' width 6 differs from original width 5
+
+-Upgraded port 's_axi_CTL_AWADDR' width 6 differs from original width 5
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARADDR'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARBURST'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARCACHE'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARLEN'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARLOCK'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARPROT'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARQOS'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARREADY'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARREGION'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARSIZE'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_ARVALID'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWADDR'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWBURST'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWCACHE'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWLEN'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWLOCK'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWPROT'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWQOS'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWREADY'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWREGION'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWSIZE'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_AWVALID'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_BREADY'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_BRESP'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_BVALID'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_RDATA'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_RLAST'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_RREADY'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_RRESP'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_RVALID'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_WDATA'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_WLAST'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_WREADY'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_WSTRB'
+
+-Upgrade has removed port 'm_axi_DATA_INPUT_WVALID'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARADDR'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARBURST'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARCACHE'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARLEN'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARLOCK'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARPROT'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARQOS'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARREADY'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARREGION'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARSIZE'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_ARVALID'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWADDR'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWBURST'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWCACHE'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWLEN'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWLOCK'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWPROT'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWQOS'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWREADY'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWREGION'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWSIZE'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_AWVALID'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_BREADY'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_BRESP'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_BVALID'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_RDATA'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_RLAST'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_RREADY'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_RRESP'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_RVALID'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_WDATA'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_WLAST'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_WREADY'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_WSTRB'
+
+-Upgrade has added port 'm_axi_DATA_IMAGE_WVALID'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARADDR'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARBURST'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARCACHE'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARLEN'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARLOCK'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARPROT'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARQOS'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARREADY'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARREGION'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARSIZE'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_ARVALID'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWADDR'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWBURST'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWCACHE'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWLEN'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWLOCK'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWPROT'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWQOS'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWREADY'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWREGION'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWSIZE'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_AWVALID'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_BREADY'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_BRESP'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_BVALID'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_RDATA'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_RLAST'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_RREADY'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_RRESP'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_RVALID'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_WDATA'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_WLAST'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_WREADY'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_WSTRB'
+
+-Upgrade has added port 'm_axi_DATA_PARAMETERS_WVALID'
+
+
+4. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_DATA_INPUT_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_DATA_INPUT_ID_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_INPUT_DATA_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_DATA_INPUT_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_DATA_INPUT_AWUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_INPUT_WUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_INPUT_BUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_INPUT_ARUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_INPUT_RUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_INPUT_USER_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_DATA_INPUT_PROT_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_DATA_INPUT_CACHE_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '"0011"'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:lenet_cnn:1.0 -user_name mnist_bd_lenet_cnn_0_0
+set_property -dict "\
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ARUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_AWUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_BUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_CACHE_VALUE {"0011"} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_DATA_WIDTH {32} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ENABLE_ID_PORTS {false} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ENABLE_USER_PORTS {false} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ID_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_PROT_VALUE {"000"} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_RUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_USER_VALUE {0x00000000} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_WUSER_WIDTH {1} \
+  CONFIG.Component_Name {mnist_bd_lenet_cnn_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_CTL:m_axi_DATA_INPUT:m_axi_DATA_FC6_OUTPUT} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {} \
+  CONFIG.ap_clk.FREQ_HZ {100000000} \
+  CONFIG.ap_clk.INSERT_VIP {0} \
+  CONFIG.ap_clk.PHASE {0.000} \
+  CONFIG.ap_rst_n.INSERT_VIP {0} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {493652} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.ADDR_WIDTH {32} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.ARUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.AWUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.BUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.CLK_DOMAIN {} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.DATA_WIDTH {32} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.FREQ_HZ {100000000} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_BRESP {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_BURST {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_CACHE {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_LOCK {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_PROT {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_QOS {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_REGION {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_RRESP {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_WSTRB {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.ID_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.INSERT_VIP {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.MAX_BURST_LENGTH {256} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.MAX_READ_BURST_LENGTH {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.MAX_WRITE_BURST_LENGTH {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_READ_OUTSTANDING {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_READ_THREADS {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_WRITE_OUTSTANDING {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_WRITE_THREADS {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.PHASE {0.000} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.PROTOCOL {AXI4} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.RUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.WUSER_WIDTH {0} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_CTL.ADDR_WIDTH {5} \
+  CONFIG.s_axi_CTL.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.BUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.CLK_DOMAIN {} \
+  CONFIG.s_axi_CTL.DATA_WIDTH {32} \
+  CONFIG.s_axi_CTL.FREQ_HZ {100000000} \
+  CONFIG.s_axi_CTL.HAS_BRESP {1} \
+  CONFIG.s_axi_CTL.HAS_BURST {0} \
+  CONFIG.s_axi_CTL.HAS_CACHE {0} \
+  CONFIG.s_axi_CTL.HAS_LOCK {0} \
+  CONFIG.s_axi_CTL.HAS_PROT {0} \
+  CONFIG.s_axi_CTL.HAS_QOS {0} \
+  CONFIG.s_axi_CTL.HAS_REGION {0} \
+  CONFIG.s_axi_CTL.HAS_RRESP {1} \
+  CONFIG.s_axi_CTL.HAS_WSTRB {1} \
+  CONFIG.s_axi_CTL.ID_WIDTH {0} \
+  CONFIG.s_axi_CTL.INSERT_VIP {0} \
+  CONFIG.s_axi_CTL.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_CTL.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_CTL.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_CTL.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_CTL.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_CTL.PHASE {0.000} \
+  CONFIG.s_axi_CTL.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_CTL.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_CTL.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CTL.RUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_CTL.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CTL.WUSER_WIDTH {0} " [get_ips mnist_bd_lenet_cnn_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Fri Apr 19 15:28:50 2024
+| Host         : Edward-Desktop running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'mnist_bd_lenet_cnn_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of mnist_bd_lenet_cnn_0_0 (xilinx.com:hls:lenet_cnn:1.0) from (Rev. 2113500255) to (Rev. 2113521388)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'mnist_bd_lenet_cnn_0_0'.
+
+
+-Upgrade has removed interface 'm_axi_DATA_IMAGE'
+
+-Upgrade has removed interface 'm_axi_DATA_PARAMETERS'
+
+-Upgrade has added interface 'm_axi_DATA_INPUT' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'mnist_bd_lenet_cnn_0_0'. These changes may impact your design.
+
+
+-Upgraded port 's_axi_CTL_ARADDR' width 5 differs from original width 6
+
+-Upgraded port 's_axi_CTL_AWADDR' width 5 differs from original width 6
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARADDR'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARBURST'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARCACHE'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARLEN'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARLOCK'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARPROT'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARQOS'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARREADY'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARREGION'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARSIZE'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_ARVALID'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWADDR'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWBURST'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWCACHE'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWLEN'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWLOCK'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWPROT'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWQOS'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWREADY'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWREGION'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWSIZE'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_AWVALID'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_BREADY'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_BRESP'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_BVALID'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_RDATA'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_RLAST'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_RREADY'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_RRESP'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_RVALID'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_WDATA'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_WLAST'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_WREADY'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_WSTRB'
+
+-Upgrade has removed port 'm_axi_DATA_IMAGE_WVALID'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARADDR'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARBURST'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARCACHE'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARLEN'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARLOCK'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARPROT'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARQOS'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARREADY'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARREGION'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARSIZE'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_ARVALID'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWADDR'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWBURST'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWCACHE'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWLEN'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWLOCK'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWPROT'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWQOS'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWREADY'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWREGION'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWSIZE'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_AWVALID'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_BREADY'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_BRESP'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_BVALID'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_RDATA'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_RLAST'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_RREADY'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_RRESP'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_RVALID'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_WDATA'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_WLAST'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_WREADY'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_WSTRB'
+
+-Upgrade has removed port 'm_axi_DATA_PARAMETERS_WVALID'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARADDR'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARBURST'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARCACHE'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARLEN'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARLOCK'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARPROT'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARQOS'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARREADY'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARREGION'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARSIZE'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_ARVALID'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWADDR'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWBURST'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWCACHE'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWLEN'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWLOCK'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWPROT'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWQOS'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWREADY'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWREGION'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWSIZE'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_AWVALID'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_BREADY'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_BRESP'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_BVALID'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_RDATA'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_RLAST'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_RREADY'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_RRESP'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_RVALID'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_WDATA'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_WLAST'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_WREADY'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_WSTRB'
+
+-Upgrade has added port 'm_axi_DATA_INPUT_WVALID'
+
+
+4. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_DATA_IMAGE_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_DATA_IMAGE_ID_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_IMAGE_DATA_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_DATA_IMAGE_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_DATA_IMAGE_AWUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_IMAGE_WUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_IMAGE_BUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_IMAGE_ARUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_IMAGE_RUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_IMAGE_USER_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_DATA_IMAGE_PROT_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_DATA_IMAGE_CACHE_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '"0011"'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_ENABLE_ID_PORTS' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_ID_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_DATA_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '32'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_ENABLE_USER_PORTS' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to 'false'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_AWUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_WUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_BUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_ARUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_RUSER_WIDTH' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '1'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_USER_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '0x00000000'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_PROT_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '"000"'
+
+Parameter 'C_M_AXI_DATA_PARAMETERS_CACHE_VALUE' is no longer present on the upgraded IP 'mnist_bd_lenet_cnn_0_0', and cannot be set to '"0011"'
+
+
+5. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:lenet_cnn:1.0 -user_name mnist_bd_lenet_cnn_0_0
+set_property -dict "\
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ARUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_AWUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_BUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_CACHE_VALUE {"0011"} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_DATA_WIDTH {32} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ENABLE_ID_PORTS {false} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ENABLE_USER_PORTS {false} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_ID_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_PROT_VALUE {"000"} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_RUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_USER_VALUE {0x00000000} \
+  CONFIG.C_M_AXI_DATA_FC6_OUTPUT_WUSER_WIDTH {1} \
+  CONFIG.Component_Name {mnist_bd_lenet_cnn_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_CTL:m_axi_DATA_IMAGE:m_axi_DATA_PARAMETERS:m_axi_DATA_FC6_OUTPUT} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {mnist_bd_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.ap_clk.FREQ_HZ {100000000} \
+  CONFIG.ap_clk.INSERT_VIP {0} \
+  CONFIG.ap_clk.PHASE {0.000} \
+  CONFIG.ap_rst_n.INSERT_VIP {0} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {549064} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.ADDR_WIDTH {32} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.ARUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.AWUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.BUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.CLK_DOMAIN {mnist_bd_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.DATA_WIDTH {32} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.FREQ_HZ {100000000} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_BRESP {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_BURST {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_CACHE {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_LOCK {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_PROT {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_QOS {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_REGION {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_RRESP {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.HAS_WSTRB {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.ID_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.INSERT_VIP {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.MAX_BURST_LENGTH {256} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.MAX_READ_BURST_LENGTH {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.MAX_WRITE_BURST_LENGTH {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_READ_OUTSTANDING {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_READ_THREADS {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_WRITE_OUTSTANDING {16} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.NUM_WRITE_THREADS {1} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.PHASE {0.000} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.PROTOCOL {AXI4} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.RUSER_WIDTH {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_DATA_FC6_OUTPUT.WUSER_WIDTH {0} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_CTL.ADDR_WIDTH {6} \
+  CONFIG.s_axi_CTL.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.BUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.CLK_DOMAIN {mnist_bd_processing_system7_0_0_FCLK_CLK0} \
+  CONFIG.s_axi_CTL.DATA_WIDTH {32} \
+  CONFIG.s_axi_CTL.FREQ_HZ {100000000} \
+  CONFIG.s_axi_CTL.HAS_BRESP {1} \
+  CONFIG.s_axi_CTL.HAS_BURST {0} \
+  CONFIG.s_axi_CTL.HAS_CACHE {0} \
+  CONFIG.s_axi_CTL.HAS_LOCK {0} \
+  CONFIG.s_axi_CTL.HAS_PROT {0} \
+  CONFIG.s_axi_CTL.HAS_QOS {0} \
+  CONFIG.s_axi_CTL.HAS_REGION {0} \
+  CONFIG.s_axi_CTL.HAS_RRESP {1} \
+  CONFIG.s_axi_CTL.HAS_WSTRB {1} \
+  CONFIG.s_axi_CTL.ID_WIDTH {0} \
+  CONFIG.s_axi_CTL.INSERT_VIP {0} \
+  CONFIG.s_axi_CTL.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_CTL.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_CTL.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_CTL.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_CTL.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_CTL.PHASE {0.000} \
+  CONFIG.s_axi_CTL.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_CTL.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_CTL.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CTL.RUSER_WIDTH {0} \
+  CONFIG.s_axi_CTL.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_CTL.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CTL.WUSER_WIDTH {0} " [get_ips mnist_bd_lenet_cnn_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Thu Apr  4 23:16:12 2024
 | Host         : Edward-Desktop running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
