@@ -109,6 +109,7 @@ with torch.no_grad():
 
     print('Accuracy of the network on the 10000 test images: {} %'.format(100 * correct / total))
 
+# print the model's weights and biases dimensions and save them in a *.pt file
 print("Model's state_dict:")
 for param_tensor in model.state_dict():
     print(param_tensor, "\t", model.state_dict()[param_tensor].size())
