@@ -326,3 +326,10 @@ con
 
 11:27:48 INFO  : Launch script is exported to file 'C:\cs543\mnist_hw_acc\mnist_soc\mnist_soc.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lenet_cnn.elf_on_local.tcl'
 15:27:09 INFO  : Disconnected from the channel tcfchan#3.
+11:38:47 INFO  : Registering command handlers for SDK TCF services
+11:38:48 INFO  : Launching XSCT server: xsct.bat -interactive C:\cs543\mnist_hw_acc\mnist_soc\mnist_soc.sdk\temp_xsdb_launch_script.tcl
+11:38:51 INFO  : XSCT server has started successfully.
+11:38:51 INFO  : Successfully done setting XSCT server connection channel  
+11:38:55 INFO  : Successfully done setting SDK workspace  
+11:38:55 INFO  : Processing command line option -hwspec C:/cs543/mnist_hw_acc/mnist_soc/mnist_soc.sdk/mnist_bd_wrapper.hdf.
+11:38:55 INFO  : Checking for hwspec changes in the project mnist_bd_wrapper_hw_platform_0.
