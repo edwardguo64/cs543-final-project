@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Apr  4 23:15:18 2024
-# Process ID: 36644
+# Start of session at: Fri Apr 19 16:44:46 2024
+# Process ID: 43112
 # Current directory: C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/impl/ip
 # Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file: C:/cs543/mnist_hw_acc/lenet_cnn_hls/solution1/impl/ip/vivado.log
@@ -25,4 +25,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_cnn_ap_fmul
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  4 23:15:37 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 16:45:10 2024...
